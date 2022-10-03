@@ -20,6 +20,9 @@ function App() {
         },
         {
           path: "/products",
+          loader: async () => {
+            return fetch(`products.json`);
+          },
           element: <Products></Products>,
         },
         {
